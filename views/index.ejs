@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All posts</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <h1>Mufaddals Posts</h1>
+    <a href="http://localhost:3000/posts/new">Create a new post</a>
+    <% for(post of posts) { %>
+    <div>
+      <h2><%= post.title %></h2>
+      <p><%= post.content %></p>
+      <p>Posted by <%= post.author %></p>
+      <p>Date: <%= post.date %></p>
+      <hr />
+      <a href="http://localhost:3000/posts/<%= post.id %>">Read more</a>
+      <a href="http://localhost:3000/posts/<%= post.id %>/edit">Edit</a>
+      <form method="post" action="/posts/<%= post.id %>?_method=DELETE">
+        <Button>Delete the post</Button>
+      </form>
+    </div>
+    <% }%>
+  </body>
+</html>
