@@ -1,0 +1,1 @@
+#This project is a simple CRUD (Create, Read, Update, Delete) application built with Node.js and Express.js. It serves as a basic blog platform where users can perform operations such as creating, viewing, updating, and deleting blog posts. The application uses server-side rendering with EJS templates and is a great starting point for learning about web development with Express.
